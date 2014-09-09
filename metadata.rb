@@ -9,3 +9,10 @@ version          '0.1.0'
 depends "zabbix"
 
 recipe "rsc_zabbix::default", "installs and configures zabbix"
+recipe "rsc_zabbix::agent", "installs the agent"
+
+
+attribute "zabbix/agent/servers",
+  :display_name => "Zabbix Servers",
+  :description => "Zabbix Servers",
+  :type => "array"
