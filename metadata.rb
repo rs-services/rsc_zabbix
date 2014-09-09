@@ -8,4 +8,4 @@ version          '0.1.0'
 
 depends "zabbix"
 
-recipe "rsc_zabbix::default", "dinstalls and configures zabbix"`
+recipe "rsc_zabbix::default", "installs and configures zabbix"
