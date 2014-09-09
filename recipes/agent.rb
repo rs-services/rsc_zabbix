@@ -3,4 +3,5 @@ marker "recipe_start_rightscale" do
 end
 
 include_recipe "zabbix::agent"
+node.set['zabbix']['web']['fqdn']=node[:zabbix][:agent][:servers].first
 include_recipe "zabbix::agent_registration"
