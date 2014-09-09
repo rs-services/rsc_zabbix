@@ -17,7 +17,7 @@
 #
 
 marker "recipe_start_rightscale" do
-  emplate "rightscale_audit_entry.erb"
+  template "rightscale_audit_entry.erb"
 end
 
 package "mysql-devel" do
