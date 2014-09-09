@@ -31,3 +31,23 @@ include_recipe "zabbix::server"
 include_recipe "php::default"
 include_recipe "zabbix::web"
 
+cookbook_file "/etc/httpd/mods-available/php5.load" do
+  source "php5.load"
+  owner "root"
+  group "root"
+  mode "0644"
+  action :create
+end
+
+cookbook_file "/etc/httpd/mods-available/php5.conf" do
+  source "php5.conf"
+  owner "root"
+  group "root"
+  mode "0644"
+  action :create
+end
+
+execute "a2enmod php5}" do
+  command "/usr/sbin/a2enmod php5}"
+  notifies :reload, 'service[apache2]', :delayed
+end
