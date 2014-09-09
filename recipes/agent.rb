@@ -3,3 +3,4 @@ marker "recipe_start_rightscale" do
 end
 
 include_recipe "zabbix::agent"
+include_recipe "zabbix::agent_registration"
