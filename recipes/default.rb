@@ -47,7 +47,7 @@ cookbook_file "/etc/httpd/mods-available/php5.conf" do
   action :create
 end
 
-execute "a2enmod php5}" do
-  command "/usr/sbin/a2enmod php5}"
+execute "a2enmod php5" do
+  command "/usr/sbin/a2enmod php5"
   notifies :reload, 'service[apache2]', :delayed
 end
